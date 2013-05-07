@@ -1,10 +1,20 @@
 FinalProject::Application.routes.draw do
 
-  root :to => "static_pages#welcome"
-  #get "/" => "static_pages#welcome"
+  get "users/new"
 
-  post "create" => "static_pages#create"
+  get "users/create"
 
-  #No route matches {:action=>"create", :controller=>"static_pages"}
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
+  root :to => "users#new"
+  resources :users
+  resources :sessions
 
 end
