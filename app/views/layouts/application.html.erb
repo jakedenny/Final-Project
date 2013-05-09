@@ -1,28 +1,79 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-  <title>FinalProject</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+    	<meta charset="utf-8">
+    	<meta name="keywords" content="redeblinds, red-e-blinds, blinds, home, windows, design, interior design, apartment, DIY, do-it-yourself, window blinds, window shades, window coverings, window treatments, vertical blinds">
+    	<meta name="description" content="redeblinds offers the best in quality custom vertical blinds. For the home, apartment, office or just because. Ready for simple DIY installation with the best visual impact on your windows, delivered to your door.">
+
+		<title>redeblinds</title>
+		
+		<%= stylesheet_link_tag "application", :media => "all" %>
+
+		<%= javascript_include_tag "application", :media => "all" %>
+
+  		<%= csrf_meta_tags %>
+
+		<script type="text/javascript">
+			$(window).load(function() {
+				$('#featured').orbit();
+			});
+		</script>
+		
 </head>
+
 <body>
 
-	<div id="user_nav">
-	  <% if current_user %>
-	    Logged in as <%= current_user.email %>
-	    <%= link_to "Log out", log_out_path %>
-	  <% else %>
-	    <%= link_to "Sign up", sign_up_path %> or
-	    <%= link_to "Log in", log_in_path %>
-	  <% end %>
-	</div>
+<div class="account"> <!-- account login -->
+	<ul>
+		<li><%= link_to "My Account", account_path %></li>
+		<li><%= link_to "Shopping Cart", cart_path %></li>
+	</ul>
+</div> <!-- account login -->
 
-	<% flash.each do |name, msg| %>
-	  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-	<% end %>
+<div id="container">
+			
+	<div class="header-nav"> <!-- navigation -->
+		<div class="navbar">
+			<ul>
+				<li><h1><%= link_to "redeblinds", root_url %></h1></li>
+				<li><%= link_to "Choose", choose_path %></li>
+				<li><%= link_to "Measure", measure_path %></li>
+				<li><%= link_to "Order", order_path %></li>
+				<li><%= link_to "Install", install_path %></li>
+			</ul>
+		</div>
+	</div> <!-- navigation -->
 
-<%= yield %>
+	<div class="main-content"> <!-- main content section -->
 
+		<%= yield %>
+		
+	</div> <!-- main content section -->
+
+	<div class="carousel-padding">
+		</div>
+
+	<div class="footer"> <!-- footer -->
+		<div class="legal-copy">
+			<ul>
+				<li>Lebowski ipsum how's the smut business, Jackie? Dolor sit amet, consectetur adipiscing elit praesent ac. I see you rolled your way into the semis. Dios mio, man. Seamus and me, we're gonna fuck you up. Magna justo pellentesque ac lectus quis elit blandit. Ja, vee could really do it, Lebowski. Fringilla a ut turpis praesent felis ligula, malesuada suscipit malesuada non. …and even if he's a lazy man, and the Dude was certainly that—quite possibly the laziest in Los Angeles County. Ultrices non urna sed orci ipsum, placerat id condimentum.</li>
+				<li><h3>Get Social with redeblinds</h3></li>
+			</ul>
+		</div>
+
+		<div class="social-media"> <!-- #social-media -->
+			<ul>
+				<li class="Pinterest"><a href="http://pinterest.com/redeblinds/" target="_blank">Pinterest</a></li>
+				<li class="Facebook"><a href="https://www.facebook.com/redeblinds" target="_blank">Facebook</a></li>
+				<li class="Instagram"><a href="http://instagram.com/redeblinds" target="_blank">Instagram</a></li>
+				<li class="Twitter"><a href="https://twitter.com/redeblinds" target="_blank">Twitter</a></li>
+			</ul>
+		</div> <!-- #social-media --> 
+	</div> <!-- footer -->
+
+</div>
 </body>
 </html>
+
+<!-- this is where the core site navigation lives -->

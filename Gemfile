@@ -8,11 +8,14 @@ gem 'rails', '3.2.12'
 group :development, :test do
 	gem 'sqlite3'
 	gem 'sqlite3-ruby'
+	gem 'better_errors'
+	gem "rspec-rails", "~> 2.0"
 end
 
 group :production do
 	gem 'pg'
 	gem 'thin'
+
 end
 
 gem "devise", "~> 2.2.3"

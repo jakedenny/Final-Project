@@ -1,6 +1,11 @@
 class StaticPagesController < ApplicationController
+	def index
+	end
 
-	def welcome
+	def measure
+	end
+
+	def account
 	end
 
 end

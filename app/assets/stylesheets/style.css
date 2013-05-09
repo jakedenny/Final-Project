@@ -1,0 +1,740 @@
+/* 
+Project Name: Final Project - FERR
+Title: redeblinds PC + smartphone
+Author: Jake Denny | @jakedenny
+New York, May 2013
+*/
+
+/***************************
+/* SETUP
+/***************************/
+
+html
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/***************************
+/* BASE STYLES
+/***************************/
+
+body {
+  margin: 0 auto;
+  background-color: #FFFF00;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#container {
+  margin: 0 auto;
+  padding: 90px 0px 0px 0px;
+}
+
+/***************************
+/* HEADER
+/***************************/
+
+.account {
+  height: 50px;
+  width: 388px;
+  margin: 30px 238px 0px 0px;
+  background-color: #A9A9A9;
+  float: right;
+}
+
+.account ul {
+  height: 100%;
+  width: 388px;
+  margin: 0 auto;
+  background-color: #A9A9A9;
+  float: left;
+  padding: 0px;
+}
+
+.account ul li {
+  height: 99%;
+  width: 192px;
+  float: left;
+  border: 1px solid #000000;
+  list-style: none;
+}
+
+.account ul li a {
+  display: block;
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.account ul li:hover {
+    background: #FFFFFF;
+}
+
+/***************************
+/* NAVIGATION
+/**************************/
+
+.header-nav {
+  height: 80px;
+  width: repeat-x;
+  margin: 0 auto;
+  background-color: #000000;
+}
+
+.navbar {
+  height: 100%;
+  width: 960px;
+  margin: 0 auto;
+  background-color: #000000;
+}
+
+.navbar ul {
+  height: 100%;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.navbar ul li {
+  height: 78px;
+  width: 190px;
+  float: left;
+  border:1px solid #FFFFFF;
+  list-style: none;
+}
+
+.navbar ul li h1 {
+  height: 78px;
+  max-width: 78px;
+  margin: 0 auto;
+  background: url(/assets/redeblinds_sml.png);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 28px 0px 0px 0px;
+  text-align: center;
+  font-size: 23px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.navbar ul li:hover {
+    background: #A9A9A9;
+}
+
+.navbar ul li h1 a:hover {
+    background: none;
+}
+
+/***************************
+/* CAROUSEL
+/***************************/
+
+.main-content {
+  height: 450px;
+  max-width: 960px;
+  margin: -184px 0 0 -480px;
+  padding: 1px 0px 0px 0px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#featured { 
+  max-width: 100%;
+  background: #000 url('assets/loading.gif') no-repeat center center;
+  overflow: hidden; }
+
+#featured > img,
+#featured > div,
+#featured > a { display: none; }
+
+/***************************
+/* container
+/***************************/
+
+div.orbit-wrapper {
+    width: 1px;
+    height: 1px;
+    position: relative; }
+
+div.orbit {
+    width: 1px;
+    height: 1px;
+    position: relative;
+    overflow: hidden }
+
+div.orbit>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; }
+
+div.orbit>a {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 0; 
+    display: none; }
+
+.orbit>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
+
+/***************************
+/* timer
+/***************************/
+
+div.timer {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: .6;
+    cursor: pointer;
+    z-index: 1001; }
+
+span.rotator {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    background: url(/assets/rotator-black.png) no-repeat;
+    z-index: 3; }
+
+span.mask {
+    display: block;
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    overflow: hidden; }
+
+span.rotator.move {
+    left: 0 }
+
+span.mask.move {
+    width: 40px;
+    left: 0;
+    background: url(/assets/timer-black.png) repeat 0 0; }
+
+span.pause {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/assets/pause-black.png) no-repeat;
+    z-index: 4;
+    opacity: 0; }
+
+span.pause.active {
+    background: url(/assets/pause-black.png) no-repeat 0 -40px }
+
+div.timer:hover span.pause,
+span.pause.active {
+    opacity: 1 }
+
+/***************************
+/* captions
+/***************************/
+
+.orbit-caption {
+    display: none;
+    font-family: "HelveticaNeue", "Helvetica-Neue", Helvetica, Arial, sans-serif; }
+
+.orbit-wrapper .orbit-caption {
+    background: #000;
+    background: rgba(0,0,0,.6);
+    z-index: 1000;
+    color: #fff;
+  text-align: center;
+  padding: 7px 0;
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%; }
+
+/***************************
+/* directional nav
+/***************************/
+
+div.slider-nav {
+    display: block }
+
+div.slider-nav span {
+    width: 78px;
+    height: 100px;
+    text-indent: -9999px;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    margin-top: -50px;
+    cursor: pointer; }
+
+div.slider-nav span.right {
+    background: url(/assets/right-arrow.png);
+    right: 0; }
+
+div.slider-nav span.left {
+    background: url(/assets/left-arrow.png);
+    left: 0; }
+
+/***************************
+/* bullet nav
+/***************************/
+
+.orbit-bullets {
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    bottom: -40px;
+    left: 50%;
+  margin-left: -50px;
+    padding: 0; }
+
+.orbit-bullets li {
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #999;
+    text-indent: -9999px;
+    background: url(/assets/bullets.jpg) no-repeat 4px 0;
+    width: 13px;
+    height: 12px;
+    overflow: hidden; }
+
+.orbit-bullets li.active {
+    color: #222;
+    background-position: -8px 0; }
+    
+.orbit-bullets li.has-thumb {
+    background: none;
+    width: 100px;
+    height: 75px; }
+
+.orbit-bullets li.active.has-thumb {
+    background-position: 0 0;
+    border-top: 2px solid #000; }
+
+/**************************
+/* CARDS
+/**************************/
+
+#cards {
+  height: 280px;
+  width: 610px;
+  margin: 10px 165px 165px 165px;
+  padding: 10px;
+  background-color: #FFFF00;
+  position: absolute;
+}
+
+.card1 {
+  width: 180px;
+  height: 260px;
+  background: url(/assets/measuring_window_260x180.jpg);
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
+}
+
+.card1-flip {
+  width: 180px;
+  height: 260px;
+  background: url(/assets/260x180_measure.jpg);
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
+}
+
+.card2 {
+  width: 180px;
+  height: 260px;
+  background: url(/assets/SM_260x180.jpg);
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
+}
+
+.card2-flip {
+  width: 180px;
+  height: 260px;
+  background-color: black;
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
+}
+
+.card3 {
+  width: 180px;
+  height: 260px;
+  background: url(/assets/provideo_260x180.jpg);
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
+}
+
+.card3-flip {
+  width: 180px;
+  height: 260px;
+  background-color: black;
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
+}
+
+.carousel-padding {
+  width: 960px;
+  height: 840px;
+  margin: 0 auto;
+  background-color: #A9A9A9;
+}
+
+/***************************
+/* ACCOUNT - login 
+Copyright (c) 2013 Thibaut Courouble
+http://www.cssflow.com
+Licensed under the MIT License
+
+Sass/SCSS source: http://goo.gl/XUUuN
+PSD by Alex Montague: http://goo.gl/lMwBA
+/***************************/
+
+input, textarea, select, label {
+  font-family: inherit;
+  font-size: 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.login {
+  margin: 100px 380px 100px 360px;
+  padding: 18px 20px;
+  width: 200px;
+  background: #FFFF00;
+  background-clip: padding-box;
+  border: 1px solid #FFCC00;
+  border-bottom-color: #FF9900;
+  border-radius: 5px;
+  background-image: -webkit-radial-gradient(cover, #FFFF4E, #FFFF27);
+  background-image: -moz-radial-gradient(cover, #FFFF4E, #FFFF27);
+  background-image: -o-radial-gradient(cover, #FFFF4E, #FFFF27);
+  background-image: radial-gradient(cover, #FFFF4E, #FFFF27);
+}
+
+.login > h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.4);
+}
+
+.login-input {
+  display: block;
+  width: 100%;
+  height: 37px;
+  margin-bottom: 20px;
+  padding: 0 9px;
+  color: #000000;
+  text-shadow: 0 1px black;
+  background: #D8D800;
+  border: 1px solid #898900;
+  border-top-color: #626200;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0));
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.login-input:focus {
+  outline: 0;
+  background-color: #FFFF00;
+}
+
+.lt-ie9 .login-input { line-height: 35px; }
+
+.login-submit {
+  display: block;
+  width: 100%;
+  height: 37px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+  background: #A9A9A9;
+  background-clip: padding-box;
+  border: 1px solid #FFFF00;
+  border-bottom-color: #FFFF00;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #A9A9A9, #999999);
+  background-image: -moz-linear-gradient(top, #A9A9A9, #999999);
+  background-image: -o-linear-gradient(top, #A9A9A9, #999999);
+  background-image: linear-gradient(to bottom, #A9A9A9, #999999);
+}
+
+.login-submit:active {
+  background: #000000;
+}
+
+.login-help {
+  text-align: center;
+}
+
+.login-help > a {
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.4);
+}
+
+.login-help > a:hover {
+  text-decoration: underline;
+}
+
+/***************************
+/* FOOTER
+/***************************/
+
+.footer {
+  width: 960px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 10px 0px 10px 0px;
+  background-color: #000000;
+}
+
+.social-media {
+    float: right;
+    padding: 10px 50px;
+}
+
+.social-media ul li {
+    float: left;
+    background: url(/assets/socialNav.png);
+    margin: -35px 5px 10px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.social-media ul li a {
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+.social-media ul li.Pinterest {
+    background-position: 0px 64px;
+}
+
+.social-media ul li.Facebook {
+    background-position: -60px 64px;
+}
+
+.social-media ul li.Instagram {
+    background-position: -120px 64px;
+}
+
+.social-media ul li.Twitter {
+    background-position: -180px 64px;
+}
+
+.social-media ul li.Pinterest:hover {
+    background-position: 0px 0px;
+}
+
+.social-media ul li.Facebook:hover {
+    background-position: -60px 0px;
+}
+
+.social-media ul li.Instagram:hover {
+    background-position: -120px 0px;
+}
+
+.social-media ul li.Twitter:hover {
+    background-position: -180px 0px;
+}
+
+.legal-copy ul {
+    margin: 20px;
+  }
+
+.legal-copy ul li {
+    width: 93.75%;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    color: #A9A9A9;
+}
+
+.legal-copy ul li h3 {
+    text-align: right;
+}
+
+/***************************
+/* MEDIA QUERIES
+/***************************/
+
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+
+  body {
+    height: 700px;
+  }
+
+    .account ul {
+      height: 100%;
+      width: 300px;
+    }
+
+    .account ul li {
+      width: 148px;
+    }
+
+    .account ul li a {
+      display: block;
+      padding: 14px 5px 10px 0px;
+      font-size: 20px;
+    }
+
+    .main-content {
+      height: 300px;
+      width: 93.75%;
+      margin: -257px 0px 0px -150px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    #featured { 
+      max-width: 300px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: center;}
+
+    #featured > img {
+      height: 300px;
+      }
+
+    #featured > a {
+      height: 300px;
+    }
+
+    .header-nav {
+      height: 60px;
+      width: 93.75%;
+      margin: 215px 10px 0px 10px;
+    }
+    
+    .navbar {
+      width: 100%;
+    }
+
+    .navbar ul {
+      width: 100%;
+    }
+
+    .navbar ul li {
+      height: 60px;
+      width: 100%;
+      float: none;
+      background-color: #000000;
+    }
+
+    .navbar ul li a {
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    }
+
+    .navbar ul li h1 {
+      height: 60px;
+      max-width: 60px;
+    }
+
+    #cards {
+      visibility: hidden;
+    }
+
+    .carousel-padding {
+      visibility: hidden;
+    }
+
+    .login {
+      margin: 5px 0px 0px 30px;
+      background: #A9A9A9;
+    }
+
+    .login-submit {
+      background: #FFFF00;
+    }
+
+    .footer {
+      height: 550px;
+      width: 100%;
+      margin: -550px 0px 200px 0px;
+      padding: 20px auto;
+      background-color: #A9A9A9;
+    }
+
+    .social-media {
+      float: center;
+      padding: 0px -20px;
+    }
+
+    .social-media ul li {
+      background: url(/assets/mob_socialNav.png);
+      background-position: center;
+      margin: -10px 2px 10px;
+    }
+
+    .legal-copy ul li h3 {
+    text-align: center;
+    }
+
+    .legal-copy ul {
+      margin: 20px 40px 10px -20px;
+      font-size: 14px;
+    }
+
+    .legal-copy ul li {
+     width: 100%;
+     color: #000000;
+    }
+
+  }
