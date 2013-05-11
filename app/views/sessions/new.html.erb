@@ -1,13 +1,23 @@
-<h1>Log in</h1>
+<div class="login">
+	<h1>redeblinds</h1>
+	<%= form_tag sessions_path do %>
+		<p>
+	    	<%= text_field_tag :email, params[:email], :class => "login-input", :placeholder => "Email Address", :autofocus => true %>
+	  	</p>
+	  	<p>
+	  		<%= password_field_tag :password, params[:password], :class => "login-input", :placeholder => "Password" %>
+	  	</p>
+	  	<p>
+	  		<%= submit_tag "Submit", :class => "login-submit" %>
+	  	</p>
+	<% end %>
+		<p class="login-help">
+			<a href="#">Forgot password?</a><br />
+		</p>
+</div>
 
-<%= form_tag sessions_path do %>
-  <p>
-    <%= label_tag :email %> <br />
-    <%= text_field_tag :email, params[:email] %>
-  </p>
-  <p>
-    <%= label_tag :password %> <br />
-    <%= password_field_tag :password %>
-  </p>
-  <p class="button"><%= submit_tag "Log in" %></p>
+<% flash.each do |name, msg| %>
+	<p>
+  		<%= content_tag :div, msg, :id => "flash_#{name}" %>
+  	</p>
 <% end %>

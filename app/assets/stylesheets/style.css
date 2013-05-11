@@ -146,7 +146,7 @@ body {
 .main-content {
   height: 450px;
   max-width: 960px;
-  margin: -184px 0 0 -480px;
+  margin: -180px 0 0 -480px;
   padding: 1px 0px 0px 0px;
   max-width: 100%;
   position: absolute;
@@ -530,6 +530,37 @@ input, textarea, select, label {
 }
 
 /***************************
+/* INSTALL
+/***************************/
+
+.install {
+  margin: 0 auto;
+}
+
+.install h2 {
+  width: 853px;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 26px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.install p {
+  width: 853px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.install-video {
+  margin: 20px 53px 30px 53px;
+}
+
+/***************************
 /* FOOTER
 /***************************/
 
@@ -562,19 +593,19 @@ input, textarea, select, label {
 }
 
 .social-media ul li.Pinterest {
-    background-position: 0px 64px;
+    background-position: 0px 60px;
 }
 
 .social-media ul li.Facebook {
-    background-position: -60px 64px;
+    background-position: -60px 60px;
 }
 
 .social-media ul li.Instagram {
-    background-position: -120px 64px;
+    background-position: -120px 60px;
 }
 
 .social-media ul li.Twitter {
-    background-position: -180px 64px;
+    background-position: -180px 60px;
 }
 
 .social-media ul li.Pinterest:hover {
@@ -613,7 +644,7 @@ input, textarea, select, label {
 /* MEDIA QUERIES
 /***************************/
 
-@media only screen and (min-width: 319px) and (max-width: 767px) {
+@media only screen and (min-width: 319px) and (max-width: 480px) {
 
   body {
     height: 700px;
@@ -714,7 +745,7 @@ input, textarea, select, label {
 
     .social-media {
       float: center;
-      padding: 0px -20px;
+      padding: 0 -20px;
     }
 
     .social-media ul li {
