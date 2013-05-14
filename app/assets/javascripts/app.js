@@ -250,31 +250,6 @@ $(document).ready(function() {
 	// ! BULLET NAV   
 	// ==================
 
-	//Bullet Nav Setup
-
-	if(options.bullets) { 
-		var bulletHTML = '<ul class="orbit-bullets"></ul>';
-		orbitWrapper.append(bulletHTML);
-		var bullets = orbitWrapper.children('ul.orbit-bullets');
-		for(i=0; i<numberSlides; i++) {
-			var liMarkup = $('<li>'+(i+1)+'</li>');
-			if(options.bulletThumbs) {
-				var	thumbName = slides.eq(i).data('thumb');
-				if(thumbName) {
-					var liMarkup = $('<li class="has-thumb">'+i+'</li>')
-					liMarkup.css({"background" : "url("+options.bulletThumbLocation+thumbName+") no-repeat"});
-				}
-			} 
-			orbitWrapper.children('ul.orbit-bullets').append(liMarkup);
-			liMarkup.data('index',i);
-			liMarkup.click(function() {
-				stopClock();
-				shift($(this).data('index'));
-			});
-		}
-		setActiveBullet();
-	}
-
 	//Bullet Nav Execution
 	function setActiveBullet() { 
 		if(!options.bullets) { return false; } else {
@@ -398,6 +373,38 @@ $(document).ready(function() {
 		});//each call
 		}//orbit plugin call
 	})(jQuery);
+
+
+// Managing responsive for video
+
+	// Find all YouTube videos
+	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+
+	    // The element that is fluid width
+	    $fluidEl = $(".main-content");
+
+		// Figure out and save aspect ratio for each video
+		$allVideos.each(function() {
+			$(this).data('aspectRatio', this.height / this.width)
+
+			// and remove the hard coded width/height
+	    	.removeAttr('height')
+	    	.removeAttr('width');
+		});
+
+		// When the window is resized
+		$(window).resize(function() {
+			var newWidth = $fluidEl.width();
+			// Resize all videos according to their own aspect ratio
+			$allVideos.each(function() {
+				var $el = $(this);
+				$el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
+	  	});
+
+	// Kick off one resize to fix all videos on page load
+	}).resize();
+
+// Carousel card animations
 
 	$('.card1').click(function(){
 		if ($(this).hasClass('card1')){

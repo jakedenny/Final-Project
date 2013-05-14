@@ -25,3 +25,7 @@
 	</p>
 	<p class="button"><%= f.submit %></p>
 <% end %>
+
+<% if current_user %>
+    <%= link_to "Index", root_url %>
+<% end %>

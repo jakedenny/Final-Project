@@ -40,6 +40,11 @@ body {
 /* HEADER
 /***************************/
 
+.logged-in {
+  margin: 2px 240px 2px 0px;
+  text-align: right;
+}
+
 .account {
   height: 50px;
   width: 388px;
@@ -115,7 +120,7 @@ body {
   height: 78px;
   max-width: 78px;
   margin: 0 auto;
-  background: url(/assets/redeblinds_sml.png);
+  background: url(/assets/redeblinds.png);
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -146,7 +151,7 @@ body {
 .main-content {
   height: 450px;
   max-width: 960px;
-  margin: -180px 0 0 -480px;
+  margin: -162px 0 0 -480px;
   padding: 1px 0px 0px 0px;
   max-width: 100%;
   position: absolute;
@@ -275,8 +280,8 @@ span.pause.active {
     background: rgba(0,0,0,.6);
     z-index: 1000;
     color: #fff;
-  text-align: center;
-  padding: 7px 0;
+    text-align: center;
+    padding: 7px 0;
     font-size: 13px;
     position: absolute;
     right: 0;
@@ -307,43 +312,6 @@ div.slider-nav span.right {
 div.slider-nav span.left {
     background: url(/assets/left-arrow.png);
     left: 0; }
-
-/***************************
-/* bullet nav
-/***************************/
-
-.orbit-bullets {
-    position: absolute;
-    z-index: 1000;
-    list-style: none;
-    bottom: -40px;
-    left: 50%;
-  margin-left: -50px;
-    padding: 0; }
-
-.orbit-bullets li {
-    float: left;
-    margin-left: 5px;
-    cursor: pointer;
-    color: #999;
-    text-indent: -9999px;
-    background: url(/assets/bullets.jpg) no-repeat 4px 0;
-    width: 13px;
-    height: 12px;
-    overflow: hidden; }
-
-.orbit-bullets li.active {
-    color: #222;
-    background-position: -8px 0; }
-    
-.orbit-bullets li.has-thumb {
-    background: none;
-    width: 100px;
-    height: 75px; }
-
-.orbit-bullets li.active.has-thumb {
-    background-position: 0 0;
-    border-top: 2px solid #000; }
 
 /**************************
 /* CARDS
@@ -530,6 +498,185 @@ input, textarea, select, label {
 }
 
 /***************************
+/* CHOOSE
+/***************************/
+
+.choose h2 {
+  width: 853px;
+  margin: 20px 10px 10px 60px;
+  text-align: center;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.choose-color {
+  width: 853px;
+  margin: 10px 10px 10px 65px;
+}
+
+.choose-color ul li {
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.color-text {
+  width: 140px;
+  margin: 120px 0px 10px 10px;
+  text-align: center;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.black {
+  width: 240px;
+  height: 240px;
+  background-color: #000000;
+  border: 1px solid black;
+  margin: 20px -5px 10px 5px;
+  float: left;
+}
+
+.off-white {
+  width: 240px;
+  height: 240px;
+  background-color: #FBFDF2;
+  border: 1px solid black;
+  margin: 20px 5px 10px 5px;
+  float: left;
+}
+
+.white {
+  width: 240px;
+  height: 240px;
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  margin: 20px -5px 0px 5px;
+  float: left;
+}
+
+.taupe {
+  width: 240px;
+  height: 240px;
+  background-color: #3D362D;
+  border: 1px solid black;
+  margin: 20px 5px 0px 5px;
+  float: left;
+}
+
+.choose-submit {
+  display: block;
+  width: 200px;
+  height: 37px;
+  margin: 50px 5px 0px 320px;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+  background: #A9A9A9;
+  background-clip: padding-box;
+  border: 1px solid #FFFF00;
+  border-bottom-color: #FFFF00;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #A9A9A9, #999999);
+  background-image: -moz-linear-gradient(top, #A9A9A9, #999999);
+  background-image: -o-linear-gradient(top, #A9A9A9, #999999);
+  background-image: linear-gradient(to bottom, #A9A9A9, #999999);
+}
+
+.choose-submit:active {
+  background: #000000;
+}
+
+.choose p {
+  width: 853px;
+  margin: 660px 5px 0px 50px;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/***************************
+/* MEASURE
+/***************************/
+
+.measure-select {
+  width: 520px;
+  margin: 10px 0px 10px 210px;
+}
+
+.measure-select-large {
+  width: 150px;
+  height: 20px;
+  margin: 10px 10px 20px 30px;
+  float: left;
+}
+
+.measure-select-small {
+  width: 50px;
+  height: 20px;
+  margin: 10px;
+  float: left;
+}
+
+.measure-submit {
+  display: block;
+  width: 200px;
+  height: 37px;
+  margin: 10px 10px 10px 170px;
+  float: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+  background: #A9A9A9;
+  background-clip: padding-box;
+  border: 1px solid #FFFF00;
+  border-bottom-color: #FFFF00;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #A9A9A9, #999999);
+  background-image: -moz-linear-gradient(top, #A9A9A9, #999999);
+  background-image: -o-linear-gradient(top, #A9A9A9, #999999);
+  background-image: linear-gradient(to bottom, #A9A9A9, #999999);
+}
+
+.measure-submit:active {
+  background: #000000;
+}
+
+.measure h2 {
+  width: 800px;
+  margin: 0px 10px 10px 80px;
+  text-align: center;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.measure p {
+  width: 853px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.measure-video {
+  margin: 10px 50px 10px 35px;
+  width: 100%;
+  height: auto;
+}
+
+/***************************
 /* INSTALL
 /***************************/
 
@@ -540,16 +687,15 @@ input, textarea, select, label {
 .install h2 {
   width: 853px;
   margin: 0 auto;
-  padding-top: 20px;
   text-align: center;
-  font-size: 26px;
+  font-size: 24px;
   color: #FFFFFF;
   text-decoration: none;
 }
 
 .install p {
   width: 853px;
-  margin: 0 auto;
+  margin: 0px auto;
   text-align: center;
   font-size: 14px;
   color: #000000;
@@ -557,7 +703,60 @@ input, textarea, select, label {
 }
 
 .install-video {
-  margin: 20px 53px 30px 53px;
+  margin: 20px 50px 10px 40px;
+  width: 100%;
+  height: auto;
+}
+
+.install-images ul li {
+  float: left;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.install-images ul li a {
+  display: absolute;
+  width: 180px;
+  height: 180px;
+  color: #FFFF00;
+  text-align: center;
+}
+
+.install1 {
+  width: 180px;
+  height: 180px;
+  background: url(/assets/brackets_rollerblinds_180x180.jpg);
+  border: 1px solid black;
+  margin: 10px 10px 10px 50px;
+  float: left;
+}
+
+.install2 {
+  width: 180px;
+  height: 180px;
+  background: url(/assets/rails_rollerblinds_180x180.jpg);
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
+}
+
+.install3 {
+  width: 180px;
+  height: 180px;
+  background: url(/assets/lift_rollerblinds_180x180.jpg);
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
+}
+
+.install4 {
+  width: 180px;
+  height: 180px;
+  background: url(/assets/safe_rollerblinds_180x180.jpg);
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
 }
 
 /***************************
@@ -573,71 +772,77 @@ input, textarea, select, label {
 }
 
 .social-media {
-    float: right;
-    padding: 10px 50px;
+  float: right;
+  padding: 10px 50px;
 }
 
 .social-media ul li {
-    float: left;
-    background: url(/assets/socialNav.png);
-    margin: -35px 5px 10px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+  float: left;
+  background: url(/assets/socialNav.png);
+  margin: -35px 5px 10px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .social-media ul li a {
-    display: block;
-    width: 60px;
-    height: 60px;
+  display: block;
+  width: 60px;
+  height: 60px;
 }
 
 .social-media ul li.Pinterest {
-    background-position: 0px 60px;
+  background-position: 0px 60px;
 }
 
 .social-media ul li.Facebook {
-    background-position: -60px 60px;
+  background-position: -60px 60px;
 }
 
 .social-media ul li.Instagram {
-    background-position: -120px 60px;
+  background-position: -120px 60px;
 }
 
 .social-media ul li.Twitter {
-    background-position: -180px 60px;
+  background-position: -180px 60px;
 }
 
 .social-media ul li.Pinterest:hover {
-    background-position: 0px 0px;
+  background-position: 0px 0px;
 }
 
 .social-media ul li.Facebook:hover {
-    background-position: -60px 0px;
+  background-position: -60px 0px;
 }
 
 .social-media ul li.Instagram:hover {
-    background-position: -120px 0px;
+  background-position: -120px 0px;
 }
 
 .social-media ul li.Twitter:hover {
-    background-position: -180px 0px;
+  background-position: -180px 0px;
 }
 
 .legal-copy ul {
-    margin: 20px;
-  }
+  margin: 20px;
+}
 
 .legal-copy ul li {
-    width: 93.75%;
-    list-style: none;
-    text-decoration: none;
-    text-align: center;
-    color: #A9A9A9;
+  width: 93.75%;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  color: #A9A9A9;
 }
 
 .legal-copy ul li h3 {
-    text-align: right;
+  text-align: right;
+}
+
+.legal-copy ul li p {
+  text-align: center;
+  margin: 100px 0px 10px 0px;
+
 }
 
 /***************************
@@ -647,11 +852,22 @@ input, textarea, select, label {
 @media only screen and (min-width: 319px) and (max-width: 480px) {
 
   body {
-    height: 700px;
+    height: 900px;
   }
 
+    .logged-in {
+      margin: -80px 30px 0px 30px;
+      text-align: right;
+      font-size: 14px;
+      color: #A9A9A9;
+    }
+
+    .account {
+      width: 300px;
+      margin: 35px 10px 0px 10px;
+    }
+
     .account ul {
-      height: 100%;
       width: 300px;
     }
 
@@ -660,9 +876,12 @@ input, textarea, select, label {
     }
 
     .account ul li a {
-      display: block;
-      padding: 14px 5px 10px 0px;
+      padding: 14px 5px 0px 0px;
       font-size: 20px;
+    }
+
+    .account ul li:hover {
+        background: #FFFFFF;
     }
 
     .main-content {
@@ -675,6 +894,7 @@ input, textarea, select, label {
 
     #featured { 
       max-width: 300px;
+      margin: 20px 0px;
       overflow: hidden;
       background-repeat: no-repeat;
       background-position: center;}
@@ -690,7 +910,7 @@ input, textarea, select, label {
     .header-nav {
       height: 60px;
       width: 93.75%;
-      margin: 215px 10px 0px 10px;
+      margin: 405px 10px 0px 10px;
     }
     
     .navbar {
@@ -709,13 +929,14 @@ input, textarea, select, label {
     }
 
     .navbar ul li a {
-    padding: 20px 0px 20px 0px;
-    font-size: 20px;
+      padding: 20px 0px 20px 0px;
+      font-size: 20px;
     }
 
     .navbar ul li h1 {
       height: 60px;
       max-width: 60px;
+      background: url(/assets/redeblinds_sml.png);
     }
 
     #cards {
@@ -726,8 +947,118 @@ input, textarea, select, label {
       visibility: hidden;
     }
 
+    .choose h2 {
+      width: 300px;
+      margin: 30px 0;
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .choose-color {
+      width: 300px;
+      margin: 10px 0px 50px 0px;
+      white-space: nowrap;
+    }
+
+    .color-text {
+      visibility: hidden;
+    }
+
+    .black {
+      width: 100px;
+      height: 100px;
+      margin: -23px 15px 0px -10px;
+      float: none;
+      overflow: hidden;
+    }
+
+    .off-white {
+      width: 100px;
+      height: 100px;
+      margin: -180px 0px 0px 125px;
+      float: none;
+      overflow: hidden;
+    }
+
+    .white {
+      width: 100px;
+      height: 100px;
+      margin: -65px -5px 0px -160px;
+      overflow: hidden;
+    }
+
+    .taupe {
+      width: 100px;
+      height: 100px;
+      margin: -380px 5px 0px 125px;
+      overflow: hidden;
+    }
+
+    .choose-submit {
+      margin: -425px 5px 0px 50px;
+    }
+
+    .choose-submit:active {
+      background: #000000;
+    }
+
+    .choose p {
+      visibility: hidden;
+    }
+
+    .install-video {
+      margin: 30px 0px 50px 0px;
+    }
+
+    .install-images {
+      visibility: hidden;
+    }
+
+    .install h2 {
+      margin: 20px 0px 0px 0px;
+      width: 300px;
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .install p {
+      visibility: hidden;
+    }
+
+    .measure-video {
+      margin: 10px 0px -100px 0px;
+    }
+
+    .measure h2 {
+      margin: 20px 0px 0px 0px;
+      width: 300px;
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .measure p {
+      visibility: hidden;
+    }
+
+    .measure-select {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .measure-select-large {
+      margin: 10px 0px 15px 40px;
+    }
+
+    .measure-submit {
+      margin: 0 auto;
+    }
+
+    .measure-submit:active {
+      background: #000000;
+    }
+
     .login {
-      margin: 5px 0px 0px 30px;
+      margin: 20px 0px 0px 30px;
       background: #A9A9A9;
     }
 
@@ -754,10 +1085,6 @@ input, textarea, select, label {
       margin: -10px 2px 10px;
     }
 
-    .legal-copy ul li h3 {
-    text-align: center;
-    }
-
     .legal-copy ul {
       margin: 20px 40px 10px -20px;
       font-size: 14px;
@@ -766,6 +1093,16 @@ input, textarea, select, label {
     .legal-copy ul li {
      width: 100%;
      color: #000000;
+    }
+
+    .legal-copy ul li h3 {
+      margin: 20px 0px 0px;
+      text-align: center;
+    }
+
+    .legal-copy ul li p {
+      text-align: center;
+      margin: 120px 0px 10px 0px;
     }
 
   }

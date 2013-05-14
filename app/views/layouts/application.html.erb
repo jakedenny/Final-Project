@@ -27,8 +27,6 @@
 <div class="account"> <!-- account login -->
 	<ul>
 		<% if current_user %>
-			Logged in as <%= current_user.email %>
-    		<%= link_to "Log out", log_out_path %>
 			<li><%= link_to "My Account", account_path %></li>
 			<li><%= link_to "Shopping Cart", cart_path %></li>
 		<% else %>
@@ -39,6 +37,13 @@
 </div> <!-- account login -->
 
 <div id="container">
+
+<div class="logged-in">
+	<% if current_user %>
+		Logged in as <%= current_user.email %>
+		<%= link_to "Log out", log_out_path %>
+	<% end %>
+</div>
 			
 	<div class="header-nav"> <!-- navigation -->
 		<div class="navbar">
@@ -64,7 +69,6 @@
 	<div class="footer"> <!-- footer -->
 		<div class="legal-copy">
 			<ul>
-				<li>Lebowski ipsum how's the smut business, Jackie? Dolor sit amet, consectetur adipiscing elit praesent ac. I see you rolled your way into the semis. Dios mio, man. Seamus and me, we're gonna fuck you up. Magna justo pellentesque ac lectus quis elit blandit. Ja, vee could really do it, Lebowski. Fringilla a ut turpis praesent felis ligula, malesuada suscipit malesuada non. …and even if he's a lazy man, and the Dude was certainly that—quite possibly the laziest in Los Angeles County. Ultrices non urna sed orci ipsum, placerat id condimentum.</li>
 				<li><h3>Get Social with redeblinds</h3></li>
 			</ul>
 		</div>
@@ -77,6 +81,13 @@
 				<li class="Twitter"><a href="https://twitter.com/redeblinds" target="_blank">Twitter</a></li>
 			</ul>
 		</div> <!-- #social-media --> 
+
+		<div class="legal-copy">
+			<ul>
+				<li><p>Lebowski ipsum how's the smut business, Jackie? Dolor sit amet, consectetur adipiscing elit praesent ac. I see you rolled your way into the semis. Dios mio, man. Seamus and me, we're gonna fuck you up. Magna justo pellentesque ac lectus quis elit blandit. Ja, vee could really do it, Lebowski. Fringilla a ut turpis praesent felis ligula, malesuada suscipit malesuada non. …and even if he's a lazy man, and the Dude was certainly that—quite possibly the laziest in Los Angeles County. Ultrices non urna sed orci ipsum, placerat id condimentum.<br><br>
+				&copy; redeblinds 2013</p></li>
+			</ul>
+		</div>
 	</div> <!-- footer -->
 
 </div>
