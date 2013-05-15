@@ -1,5 +1,11 @@
 FinalProject::Application.routes.draw do
 
+  resources :orders
+
+
+  resources :models
+
+
   get "users/new"
   get "users/create"
   get "sessions/new"
@@ -22,5 +28,6 @@ FinalProject::Application.routes.draw do
 
   resources :users
   resources :sessions
+  resources :orders
 
 end

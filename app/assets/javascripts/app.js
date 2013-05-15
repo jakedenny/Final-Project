@@ -406,8 +406,20 @@ $(document).ready(function() {
 
 // Choose Color section
 
-	$('.field-mobile').click(function(){
-		($(this).highlight);
+	$('.black-mobile').click(function() {
+		$(this).css("background-color","red");
+	});
+
+	$('.off-white-mobile').click(function() {
+		$(this).css("background-color","red");
+	});
+
+	$('.white-mobile').click(function() {
+		$(this).css("background-color","red");
+	});
+
+	$('.taupe-mobile').click(function() {
+		$(this).css("background-color","red");
 	});
 
 // Carousel card animations
