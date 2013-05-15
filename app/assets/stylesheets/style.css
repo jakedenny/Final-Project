@@ -497,6 +497,76 @@ input, textarea, select, label {
   text-decoration: underline;
 }
 
+.error-message {
+  margin: -690px 30px 2px 0px;
+  text-align: right;
+}
+
+/***************************
+/* SIGN UP
+/***************************/
+
+.sign-up-form {
+  width: 400px;
+  height: 100%;
+  margin: 50px 0px 0px 290px;
+}
+
+.sign-up-input {
+  display: block;
+  width: 100%;
+  height: 37px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 9px;
+  color: #000000;
+  text-shadow: 0 1px black;
+  background: #D8D800;
+  border: 1px solid #898900;
+  border-top-color: #626200;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0));
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.sign-up-input:focus {
+  outline: 0;
+  background-color: #FFFF00;
+}
+
+.lt-ie9 .sign-up-input { line-height: 35px; }
+
+.sign-up-submit {
+  display: block;
+  width: 100%;
+  height: 37px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+  background: #A9A9A9;
+  background-clip: padding-box;
+  border: 1px solid #FFFF00;
+  border-bottom-color: #FFFF00;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #A9A9A9, #999999);
+  background-image: -moz-linear-gradient(top, #A9A9A9, #999999);
+  background-image: -o-linear-gradient(top, #A9A9A9, #999999);
+  background-image: linear-gradient(to bottom, #A9A9A9, #999999);
+}
+
+.sign-up-submit:active {
+  background: #000000;
+}
+
 /***************************
 /* CHOOSE
 /***************************/
@@ -600,6 +670,10 @@ input, textarea, select, label {
   font-size: 14px;
   color: #000000;
   text-decoration: none;
+}
+
+.choose-mobile {
+  visibility: hidden;
 }
 
 /***************************
@@ -955,55 +1029,88 @@ input, textarea, select, label {
     }
 
     .choose-color {
-      width: 300px;
-      margin: 10px 0px 50px 0px;
-      white-space: nowrap;
-    }
-
-    .color-text {
       visibility: hidden;
-    }
-
-    .black {
-      width: 100px;
-      height: 100px;
-      margin: -23px 15px 0px -10px;
-      float: none;
-      overflow: hidden;
-    }
-
-    .off-white {
-      width: 100px;
-      height: 100px;
-      margin: -180px 0px 0px 125px;
-      float: none;
-      overflow: hidden;
-    }
-
-    .white {
-      width: 100px;
-      height: 100px;
-      margin: -65px -5px 0px -160px;
-      overflow: hidden;
-    }
-
-    .taupe {
-      width: 100px;
-      height: 100px;
-      margin: -380px 5px 0px 125px;
-      overflow: hidden;
-    }
-
-    .choose-submit {
-      margin: -425px 5px 0px 50px;
-    }
-
-    .choose-submit:active {
-      background: #000000;
+      margin: -400px 0px 0px 0px;
     }
 
     .choose p {
       visibility: hidden;
+    }
+
+    .choose-mobile {
+      visibility: visible;
+      width: 300px;
+      margin: -10px 10px 10px -10px;
+    }
+
+    .choose-mobile ul li {
+      float: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .black-mobile {
+      width: 100px;
+      height: 100px;
+      background-color: #000000;
+      border: 1px solid black;
+      margin: -280px 90px 10px 0px;
+      float: left;
+    }
+
+    .off-white-mobile {
+      width: 100px;
+      height: 100px;
+      background-color: #FBFDF2;
+      border: 1px solid black;
+      margin: -280px 0px 10px 140px;
+      float: left;
+    }
+
+    .white-mobile {
+      width: 100px;
+      height: 100px;
+      background-color: #FFFFFF;
+      border: 1px solid black;
+      margin: -160px 0px 0px 0px;
+      float: left;
+    }
+
+    .taupe-mobile {
+      width: 100px;
+      height: 100px;
+      background-color: #3D362D;
+      border: 1px solid black;
+      margin: -160px 5px 0px 140px;
+      float: left;
+    }
+
+    .choose-submit-mobile {
+      display: block;
+      width: 200px;
+      height: 37px;
+      margin: -50px 0px 0px 60px;
+      float: left;
+      font-size: 14px;
+      font-weight: bold;
+      color: #FFFFFF;
+      text-align: center;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+      background: #A9A9A9;
+      background-clip: padding-box;
+      border: 1px solid #FFFF00;
+      border-bottom-color: #FFFF00;
+      border-radius: 4px;
+      cursor: pointer;
+      background-image: -webkit-linear-gradient(top, #A9A9A9, #999999);
+      background-image: -moz-linear-gradient(top, #A9A9A9, #999999);
+      background-image: -o-linear-gradient(top, #A9A9A9, #999999);
+      background-image: linear-gradient(to bottom, #A9A9A9, #999999);
+    }
+
+    .choose-submit-mobile:active {
+      background: #000000;
     }
 
     .install-video {
@@ -1026,7 +1133,7 @@ input, textarea, select, label {
     }
 
     .measure-video {
-      margin: 10px 0px -100px 0px;
+      margin: 5px 0px -100px 0px;
     }
 
     .measure h2 {
@@ -1064,6 +1171,34 @@ input, textarea, select, label {
 
     .login-submit {
       background: #FFFF00;
+    }
+
+    .error-message {
+      margin: -405px 30px 0px 30px;
+      color: #000000;
+      text-align: center;
+    }
+
+    .sign-up-form {
+      width: 90%;
+      margin: 30px 0px 10px 15px;
+    }
+
+    .sign-up-input {
+      width: 90%;
+      margin: 5px 5px -20px 15px;
+      text-align: center;
+      }
+
+    .sign-up-submit {
+      margin-top: 25px;
+      width: 100%;
+    }
+
+    .sign-error-message h4 {
+      margin: 20px 30px -5px 30px;
+      color: #000000;
+      text-align: center;
     }
 
     .footer {

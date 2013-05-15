@@ -1,30 +1,27 @@
-<h1>Sign Up</h1>
-
-<%= form_for @user do |f| %>
-	<% if @user.errors.any? %>
-		<div class="error-messages">
-			<h2>Form is invalid</h2>
-			<ul>
-				<% for message in @user.errors.full_messages %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
+<div class="sign-up-form">
+	<%= form_for @user do |f| %>
+		<% if @user.errors.any? %>
+			<div class="sign-error-message">
+				<h4>Invalid form</h4>
+				<ul>
+					<% for message in @user.errors.full_messages %>
+						<li><%= message %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+		<p>
+			<%= text_field_tag :email, params[:email], :class => "sign-up-input", :placeholder => "Enter your email" %><br />
+		</p>
+		<p>
+			<%= password_field_tag :password, params[:password], :class => "sign-up-input", :placeholder => "Enter your password" %><br />
+		</p>
+		<p>
+			<%= submit_tag "SUBMIT", :class => "sign-up-submit" %>
+		</p>
 	<% end %>
-	<p>
-		<%= f.label :email %><br />
-		<%= f.text_field :email %>
-	</p>
-	<p>
-		<%= f.label :password %><br />
-		<%= f.password_field :password %>
-	</p>
-	<p>
-		<%= f.label :password_confirmation %><br />
-		<%= f.password_field :password_confirmation %>
-	</p>
-	<p class="button"><%= f.submit %></p>
-<% end %>
+</div>
+
 
 <% if current_user %>
     <%= link_to "Index", root_url %>

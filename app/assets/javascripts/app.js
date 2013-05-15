@@ -404,6 +404,12 @@ $(document).ready(function() {
 	// Kick off one resize to fix all videos on page load
 	}).resize();
 
+// Choose Color section
+
+	$('.field-mobile').click(function(){
+		($(this).highlight);
+	});
+
 // Carousel card animations
 
 	$('.card1').click(function(){
