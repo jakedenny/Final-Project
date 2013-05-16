@@ -11,28 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130511172408) do
+ActiveRecord::Schema.define(:version => 20130515231753) do
 
   create_table "orders", :force => true do |t|
     t.string   "color"
-    t.integer  "size"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "height"
+    t.float    "height_fraction"
+    t.integer  "width"
+    t.float    "width_fraction"
+    t.integer  "user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
     t.string   "email"
-    t.integer  "contact_number"
-    t.string   "street_address"
-    t.string   "city"
-    t.string   "state"
-    t.integer  "zip_code"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.string   "password_hash"
     t.string   "password_salt"
+    t.string   "password_hash"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end
