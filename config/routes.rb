@@ -26,6 +26,9 @@ FinalProject::Application.routes.draw do
   get "order" => "static_pages#order", :as => "order"
   get "install" => "static_pages#install", :as => "install"
 
+  post "choose" => "static_pages#choose", :as => "choose"
+  post "measure" => "static_pages#measure", :as => "measure"
+
   resources :users
   resources :sessions
   resources :orders

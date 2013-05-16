@@ -4,19 +4,20 @@
 	<div class="choose-color">
 		<div class="field">
 			<ul>
-				<form>
+				<%= form_tag ("/measure") do %>
 				<li class="black"></li>
-				<li class="color-text"><input type="radio" value="black" name="choose-color"/> Black</li>
+				<li class="color-text"><%= radio_button_tag(:choose_color, "black") %> Black</li>
 				<li class="off-white"></li>
-				<li class="color-text"><input type="radio" value="off-white" name="choose-color"/> Off-White</li>
+				<li class="color-text"><%= radio_button_tag(:choose_color, "off-white") %> Off-White</li>
 				<li class="white"></li>
-				<li class="color-text"><input type="radio" value="white" name="choose-color"/> White</li>
+				<li class="color-text"><%= radio_button_tag(:choose_color, "white") %> White</li>
 				<li class="taupe"></li>
-				<li class="color-text"><input type="radio" value="taupe" name="choose-color"/> Taupe</li>
-				</form>
+				<li class="color-text"><%= radio_button_tag(:choose_color, "taupe") %> Taupe</li>
 			</ul>
 
-			<input type="submit" value="CONFIRM COLOR" class="choose-submit">
+			<%= submit_tag "CONFIRM COLOR", :class => "choose-submit" %>
+
+		<% end %>
 
 		</div>
 
@@ -29,6 +30,7 @@
 	<div class="choose-mobile">
 		<div class="field-mobile">
 			<ul>
+			<!--use absolute positioning-->
 				<form>
 				<li class="black-mobile"></li>
 				<li class="off-white-mobile"></li>
