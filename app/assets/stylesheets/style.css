@@ -161,7 +161,7 @@ body {
 
 #featured { 
   max-width: 100%;
-  background: #000 url('assets/loading.gif') no-repeat center center;
+  background: #000 url('/assets/loading.gif') no-repeat center center;
   overflow: hidden; }
 
 #featured > img,
@@ -356,7 +356,7 @@ div.slider-nav span.left {
 .card2-flip {
   width: 180px;
   height: 260px;
-  background-color: black;
+   background: url(/assets/260x180_choose.jpg);
   border: 1px solid black;
   margin: 10px;
   float: left;
@@ -374,7 +374,7 @@ div.slider-nav span.left {
 .card3-flip {
   width: 180px;
   height: 260px;
-  background-color: black;
+  background: url(/assets/260x180_install.jpg);
   border: 1px solid black;
   margin: 10px;
   float: left;
@@ -385,6 +385,10 @@ div.slider-nav span.left {
   height: 840px;
   margin: 0 auto;
   background-color: #A9A9A9;
+}
+
+#cards-mobile {
+  visibility: hidden;
 }
 
 /***************************
@@ -747,7 +751,7 @@ input, textarea, select, label {
 .measure-video {
   margin: 10px 50px 10px 35px;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 /***************************
@@ -777,7 +781,7 @@ input, textarea, select, label {
 }
 
 .install-video {
-  margin: 20px 50px 10px 40px;
+  margin: 20px 50px 10px 35px;
   width: 100%;
   height: auto;
 }
@@ -995,46 +999,6 @@ input, textarea, select, label {
       background-position: center;
     }
 
-    #featured {
-      visibility: hidden;
-    }
-
-    #featured > img { 
-      visibility: hidden;
-    }
-
-    #featured > div, {
-      visibility: hidden;
-    }
-
-    #featured > a { 
-      visibility: hidden;
-    }
-
-    .orbit {
-      visibility: hidden;
-    }
-
-    .orbit > img {
-      visibility: hidden;
-    }
-
-    .orbit > div {
-      visibility: hidden;
-    }
-
-    .orbit > a {
-      visibility: hidden;
-    }
-
-    .orbit-wrapper {
-      visibility: hidden;
-    }
-
-    .orbit-caption {
-      visibility: hidden;
-    }
-
     .header-nav {
       height: 60px;
       width: 93.75%;
@@ -1067,8 +1031,118 @@ input, textarea, select, label {
       background: url(/assets/redeblinds_sml.png);
     }
 
+    #featured {
+      visibility: hidden;
+    }
+
+    #featured > img {
+      visibility: hidden;
+    }
+
+    #featured > div {
+      visibility: hidden;
+    }
+
+    #featured > p {
+      visibility: hidden;
+    }
+
+    .orbit {
+      visibility: hidden;
+    }
+
+    .orbit > img {
+      visibility: hidden;
+    }
+
+    .orbit > div {
+      visibility: hidden;
+    }
+
+    .orbit > a {
+      visibility: hidden;
+    }
+
+    .orbit-wrapper {
+      visibility: hidden;
+    }
+
+    .orbit-caption {
+      visibility: hidden;
+    }
+
+    .timer > div {
+      visibility: hidden;
+    }
+
+    .slider-nav > div {
+      visibility: hidden;
+    }
+
+    .slider-nav > span {
+      visibility: hidden;
+    }
+
+    .rotator > span {
+      visibility: hidden;
+    }
+
+    .mask > span {
+      visibility: hidden;
+    }
+
+    .pause > span {
+      visibility: hidden;
+    }
+
     #cards {
       visibility: hidden;
+    }
+
+    #cards-mobile {
+      width: 300px;
+      height: 260px;
+      margin: -430px 20px 0px 0px;
+      padding: 2px;
+      background-color: #FFFF00;
+      position: absolute;
+      visibility: visible;
+    }
+
+    .card1-mobile {
+      width: 140px;
+      height: 202px;
+      background: url(/assets/measuring_window_202x140.jpg);
+      border: 1px solid black;
+      margin: 2px;
+      float: left;
+    }
+
+    .card1-flip-mobile {
+      width: 140px;
+      height: 202px;
+      background: url(/assets/DIY_202x140.jpg);
+      border: 1px solid black;
+      margin: 2px;
+      float: left;
+    }
+
+    .card2-mobile {
+      width: 140px;
+      height: 202px;
+      background: url(/assets/roller_blind_202x140.jpg);
+      border: 1px solid black;
+      margin: 2px;
+      float: left;
+    }
+
+    .card2-flip-mobile {
+      width: 140px;
+      height: 202px;
+      background: url(/assets/outside_blind_202x140.jpg);
+      border: 1px solid black;
+      margin: 2px;
+      float: left;
     }
 
     .carousel-padding {
@@ -1202,6 +1276,7 @@ input, textarea, select, label {
 
     .order h2 {
       font-size: 16px;
+      margin: 20px 0px 15px 0px;
       color: #000000;
     }
 
@@ -1290,4 +1365,4 @@ input, textarea, select, label {
       margin: 120px 0px 10px 0px;
     }
 
-  }
+}

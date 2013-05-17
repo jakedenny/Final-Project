@@ -375,11 +375,27 @@ $(document).ready(function() {
 	})(jQuery);
 
 
-// Managing responsive for Orbit jQuery Carousel
-//
-//
-//
-//
+// Failed attempt to manage responsive for Orbit jQuery Carousel
+	//var $carousel = $("img[src^='/assets/']"),
+		
+		//fluidEl = $("#featured");
+
+		//$carousel.each(function() {
+		//	$(this).data('aspectRatio', this.height / this.width)
+
+		//	.removeAttr('height')
+		//	.removeAttr('width');
+		//});
+
+		//$(window).resize(function() {
+		//	var newWidth = $fluidEl.width();
+
+		//	$carousel.each(function() {
+		//		var $el = $(this);
+		//		$el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
+		//	});
+
+		//}).resize();
 //
 
 // Managing responsive for video
@@ -413,7 +429,7 @@ $(document).ready(function() {
 
 // Carousel card animations
 
-	$('.card1').click(function(){
+	$('.card1').hover(function(){
 		if ($(this).hasClass('card1')){
 			$(this).removeClass('card1');
 			$(this).addClass('card1-flip');
@@ -421,10 +437,9 @@ $(document).ready(function() {
 			$(this).removeClass('card1-flip');
 			$(this).addClass('card1');
 		}
-
 	});
 
-	$('.card2').click(function(){
+	$('.card2').hover(function(){
 		if ($(this).hasClass('card2')){
 			$(this).removeClass('card2');
 			$(this).addClass('card2-flip');
@@ -432,10 +447,9 @@ $(document).ready(function() {
 			$(this).removeClass('card2-flip');
 			$(this).addClass('card2');
 		}
-
 	});
 
-		$('.card3').click(function(){
+	$('.card3').hover(function(){
 		if ($(this).hasClass('card3')){
 			$(this).removeClass('card3');
 			$(this).addClass('card3-flip');
@@ -443,8 +457,28 @@ $(document).ready(function() {
 			$(this).removeClass('card3-flip');
 			$(this).addClass('card3');
 		}
-
 	});
 
+// Carousel card animations - mobile
+
+	$('.card1-mobile').hover(function(){
+		if ($(this).hasClass('card1-mobile')){
+			$(this).removeClass('card1-mobile');
+			$(this).addClass('card1-flip-mobile');
+		} else {
+			$(this).removeClass('card1-flip-mobile');
+			$(this).addClass('card1-mobile');
+		}
+	});
+
+	$('.card2-mobile').hover(function(){
+		if ($(this).hasClass('card2-mobile')){
+			$(this).removeClass('card2-mobile');
+			$(this).addClass('card2-flip-mobile');
+		} else {
+			$(this).removeClass('card2-flip-mobile');
+			$(this).addClass('card2-mobile');
+		}
+	});
 
 });
