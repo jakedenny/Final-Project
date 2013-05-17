@@ -375,8 +375,14 @@ $(document).ready(function() {
 	})(jQuery);
 
 
-// Managing responsive for video
+// Managing responsive for Orbit jQuery Carousel
+//
+//
+//
+//
+//
 
+// Managing responsive for video
 	// Find all YouTube videos
 	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
 
@@ -404,23 +410,6 @@ $(document).ready(function() {
 	// Kick off one resize to fix all videos on page load
 	}).resize();
 
-// Choose Color section
-
-	$('.black-mobile').click(function() {
-		$(this).css("background-color","red");
-	});
-
-	$('.off-white-mobile').click(function() {
-		$(this).css("background-color","red");
-	});
-
-	$('.white-mobile').click(function() {
-		$(this).css("background-color","red");
-	});
-
-	$('.taupe-mobile').click(function() {
-		$(this).css("background-color","red");
-	});
 
 // Carousel card animations
 

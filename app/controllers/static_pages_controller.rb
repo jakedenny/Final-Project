@@ -9,10 +9,11 @@ class StaticPagesController < ApplicationController
 	end
 
 	def choose
-		if (defined? params[:choose_color]) && (!params[:choose_color].nil?)
-			session[:color_choice] = params[:choose_color]
-			redirect_to measure_url
-		end
+		@order = Order.new(params[:order])
+	    if @order.save
+	    else
+	      render "new"
+	    end
 	end
 
 	def measure

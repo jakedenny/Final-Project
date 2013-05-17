@@ -2,44 +2,23 @@
 	<h2>Choose your color and continue.</h2>
 
 	<div class="choose-color">
-		<div class="field">
+		<%= form_for @order do |f| %>
 			<ul>
-				<%= form_tag ("/measure") do %>
-				<li class="black"></li>
-				<li class="color-text"><%= radio_button_tag(:choose_color, "black") %> Black</li>
-				<li class="off-white"></li>
-				<li class="color-text"><%= radio_button_tag(:choose_color, "off-white") %> Off-White</li>
-				<li class="white"></li>
-				<li class="color-text"><%= radio_button_tag(:choose_color, "white") %> White</li>
-				<li class="taupe"></li>
-				<li class="color-text"><%= radio_button_tag(:choose_color, "taupe") %> Taupe</li>
+					<li class="black"></li>
+					<li class="color-text"><%= radio_button_tag(:choose_color, "black") %> Black</li>
+					<li class="off-white"></li>
+					<li class="color-text"><%= radio_button_tag(:choose_color, "off-white") %> Off-White</li>
+					<li class="white"></li>
+					<li class="color-text"><%= radio_button_tag(:choose_color, "white") %> White</li>
+					<li class="taupe"></li>
+					<li class="color-text"><%= radio_button_tag(:choose_color, "taupe") %> Taupe</li>
 			</ul>
-
-			<%= submit_tag "CONFIRM COLOR", :class => "choose-submit" %>
-
+				<%= submit_tag "CONFIRM COLOR", :class => "choose-submit" %>
 		<% end %>
-
-		</div>
-
 	</div>
 
 		<p>
 			Installing your new redeblinds is extremely simple. With redeblinds, you simply fit your brackets, determine which way you prefer your blinds to face, snap your blinds into place and fix your child safe chain tidie.
 		</p>
-
-	<div class="choose-mobile">
-		<div class="field-mobile">
-			<ul>
-			<!--use absolute positioning-->
-				<form>
-				<li class="black-mobile"></li>
-				<li class="off-white-mobile"></li>
-				<li class="white-mobile"></li>
-				<li class="taupe-mobile"></li>
-				<form>
-			</ul>
-			<input type="submit" value="CONFIRM COLOR" class="choose-submit-mobile">
-		</div>
-	</div>
 
 </div>

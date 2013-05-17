@@ -1,3 +1,14 @@
-<h1>"Come 'n get your orders"</h1>
+<div class="order">
+	<h2>Your redeblinds orders are available here.</h2>
 
-<%= session[:color_choice] %>
+	<div class="display-order">
+		<p><%= 'You have selected ' +params[:choose_color].to_s+', congratulations.' %></p><br><br>
+		<p><%= 'Please double check your measurements of ' +params[:measure_select].to_s+'' %></p>
+
+	</div>
+
+	<h6>
+		Feel free to edit, delete, add or confirm your order right here.
+	</h6>
+
+</div>

@@ -498,7 +498,7 @@ input, textarea, select, label {
 }
 
 .error-message {
-  margin: -690px 30px 2px 0px;
+  margin: -655px 30px 2px 0px;
   text-align: right;
 }
 
@@ -834,6 +834,35 @@ input, textarea, select, label {
 }
 
 /***************************
+/* ORDERS
+/***************************/
+
+.order {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.order h2 {
+  font-size: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.display-order p {
+  width: 100%;
+  float: left;
+  margin: 40px 0px 20px 0px;
+}
+
+.order h6 {
+  font-size: 24px;
+  color: #000000;
+  text-decoration: none;
+  margin: 300px 0px 20px 0px;
+}
+
+/***************************
 /* FOOTER
 /***************************/
 
@@ -966,20 +995,44 @@ input, textarea, select, label {
       background-position: center;
     }
 
-    #featured { 
-      max-width: 300px;
-      margin: 20px 0px;
-      overflow: hidden;
-      background-repeat: no-repeat;
-      background-position: center;
+    #featured {
+      visibility: hidden;
     }
 
-    #featured > img {
-      height: 300px;
-      }
+    #featured > img { 
+      visibility: hidden;
+    }
 
-    #featured > a {
-      height: 300px;
+    #featured > div, {
+      visibility: hidden;
+    }
+
+    #featured > a { 
+      visibility: hidden;
+    }
+
+    .orbit {
+      visibility: hidden;
+    }
+
+    .orbit > img {
+      visibility: hidden;
+    }
+
+    .orbit > div {
+      visibility: hidden;
+    }
+
+    .orbit > a {
+      visibility: hidden;
+    }
+
+    .orbit-wrapper {
+      visibility: hidden;
+    }
+
+    .orbit-caption {
+      visibility: hidden;
     }
 
     .header-nav {
@@ -1022,96 +1075,70 @@ input, textarea, select, label {
       visibility: hidden;
     }
 
+    .choose {
+      width: 300px;
+      height: 100%;
+      display: block;
+    }
+
     .choose h2 {
       width: 300px;
-      margin: 30px 0;
+      margin: 15px 0px 0px 0px;
       font-size: 16px;
       color: #000000;
     }
 
     .choose-color {
-      visibility: hidden;
-      margin: -400px 0px 0px 0px;
+      width: 300px;
+      margin: 30px 0px 0px 0px;
     }
 
     .choose p {
       visibility: hidden;
     }
 
-    .choose-mobile {
-      visibility: visible;
-      width: 300px;
-      margin: -10px 10px 10px -10px;
+    .color-text {
+      width: 70px;
+      margin: 85px -10px 25px -70px;
+      font-size: 12px;
+      color: #000000;
     }
 
-    .choose-mobile ul li {
-      float: left;
-      white-space: nowrap;
-      overflow: hidden;
-      text-decoration: none;
-    }
-
-    .black-mobile {
+    .black {
       width: 100px;
       height: 100px;
-      background-color: #000000;
-      border: 1px solid black;
-      margin: -280px 90px 10px 0px;
+      margin: -20px -20px 10px -10px;
       float: left;
     }
 
-    .off-white-mobile {
+    .off-white {
       width: 100px;
       height: 100px;
-      background-color: #FBFDF2;
-      border: 1px solid black;
-      margin: -280px 0px 10px 140px;
+      margin: -20px 0px 0px 60px;
       float: left;
     }
 
-    .white-mobile {
+    .white {
       width: 100px;
       height: 100px;
-      background-color: #FFFFFF;
-      border: 1px solid black;
-      margin: -160px 0px 0px 0px;
+      margin: -20px 0px 0px -10px;
       float: left;
     }
 
-    .taupe-mobile {
+    .taupe {
       width: 100px;
       height: 100px;
       background-color: #3D362D;
       border: 1px solid black;
-      margin: -160px 5px 0px 140px;
+      margin: -20px 0px 0px 40px;
       float: left;
     }
 
-    .choose-submit-mobile {
+    .choose-submit {
       display: block;
       width: 200px;
       height: 37px;
-      margin: -50px 0px 0px 60px;
-      float: left;
-      font-size: 14px;
-      font-weight: bold;
-      color: #FFFFFF;
-      text-align: center;
-      text-shadow: 0 1px rgba(255, 255, 255, 0.3);
-      background: #A9A9A9;
-      background-clip: padding-box;
-      border: 1px solid #FFFF00;
-      border-bottom-color: #FFFF00;
-      border-radius: 4px;
-      cursor: pointer;
-      background-image: -webkit-linear-gradient(top, #A9A9A9, #999999);
-      background-image: -moz-linear-gradient(top, #A9A9A9, #999999);
-      background-image: -o-linear-gradient(top, #A9A9A9, #999999);
-      background-image: linear-gradient(to bottom, #A9A9A9, #999999);
-    }
-
-    .choose-submit-mobile:active {
-      background: #000000;
+      margin: -20px 0px 0px 50px;
     }
 
     .install-video {
@@ -1134,11 +1161,12 @@ input, textarea, select, label {
     }
 
     .measure-video {
+      height: 100%;
       margin: 5px 0px -100px 0px;
     }
 
     .measure h2 {
-      margin: 20px 0px 0px 0px;
+      margin: 20px 0px 15px 0px;
       width: 300px;
       font-size: 16px;
       color: #000000;
@@ -1150,7 +1178,7 @@ input, textarea, select, label {
 
     .measure-select {
       width: 300px;
-      margin: 0 auto;
+      margin: -20px 0px 0px 0px;
     }
 
     .measure-select-large {
@@ -1165,6 +1193,27 @@ input, textarea, select, label {
       background: #000000;
     }
 
+    .order {
+      width: 300px;
+      height: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .order h2 {
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .display-order p {
+      width: 100%;
+      margin: 20px 0px 0px 0px;
+    }
+
+    .order h6 {
+      visibility: hidden;
+    }
+
     .login {
       margin: 20px 0px 0px 30px;
       background: #A9A9A9;
@@ -1175,7 +1224,7 @@ input, textarea, select, label {
     }
 
     .error-message {
-      margin: -405px 30px 0px 30px;
+      margin: -370px 30px 0px 30px;
       color: #000000;
       text-align: center;
     }
