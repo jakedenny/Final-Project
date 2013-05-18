@@ -11,16 +11,16 @@
 			</div>
 		<% end %>
 		<p>
-			<%= text_field_tag :email, params[:email], :class => "sign-up-input", :placeholder => "Enter your email" %><br />
+			<%= f.text_field :email, :class => "sign-up-input", :placeholder => "Enter your email" %><br />
 		</p>
 		<p>
-			<%= password_field_tag :password, params[:password], :class => "sign-up-input", :placeholder => "Enter your password" %><br />
+			<%= f.password_field :password, :class => "sign-up-input", :placeholder => "Enter your password" %><br />
 		</p>
 		<p>
-			<%= password_field_tag :password_confirmation, params[:password_confirmation], :class => "sign-up-input", :placeholder => "Re-enter your password" %><br />
+			<%= f.password_field :password_confirmation, :class => "sign-up-input", :placeholder => "Re-enter your password" %><br />
 		</p>
 		<p>
-			<%= submit_tag "SUBMIT", :class => "sign-up-submit" %>
+			<%= f.submit "SUBMIT", :class => "sign-up-submit" %>
 		</p>
 	<% end %>
 </div>

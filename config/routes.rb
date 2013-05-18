@@ -4,8 +4,8 @@ FinalProject::Application.routes.draw do
 
   resources :models
 
-  get "users/new"
-  get "users/create"
+  # get "users/new"
+  # get "users/create"
   get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"
