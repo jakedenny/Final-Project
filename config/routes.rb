@@ -1,5 +1,7 @@
 FinalProject::Application.routes.draw do
 
+  resources :orders
+
   resources :models
 
   get "users/new"
@@ -12,10 +14,10 @@ FinalProject::Application.routes.draw do
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
 
-  root :to => "static_pages#index"
-
   get "account" => "static_pages#account", :as => "account"
   get "cart" => "static_pages#cart", :as => "cart"
+
+  root :to => "static_pages#index"
   
   get "choose" => "static_pages#choose", :as => "choose"
   get "measure" => "static_pages#measure", :as => "measure"
@@ -27,6 +29,5 @@ FinalProject::Application.routes.draw do
 
   resources :users
   resources :sessions
-  resources :orders
 
 end

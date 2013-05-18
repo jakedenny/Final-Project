@@ -25,6 +25,11 @@
 	<% end %>
 </div>
 
+<!-- just testing it records -->
+<%= 'You have sign up ' +params[:email].to_s+', congratulations.' %><br><br>
+<%= 'Here is your password - ' +params[:password].to_s+'.' %><br><br>
+<%= 'Once more for good measure, ' +params[:password_confirmation].to_s+'.' %><br><br>
+<!-- just testing it records -->
 
 <% if current_user %>
     <%= link_to root_url %>
