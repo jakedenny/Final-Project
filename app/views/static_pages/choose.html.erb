@@ -5,15 +5,15 @@
 		<%= form_for @order do |f| %>
 			<ul>
 					<li class="black"></li>
-					<li class="color-text"><%= radio_button_tag(:choose_color, "black") %> Black</li>
+					<li class="color-text"><%= f.radio_button(:color, "black") %> Black</li>
 					<li class="off-white"></li>
-					<li class="color-text"><%= radio_button_tag(:choose_color, "off-white") %> Off-White</li>
+					<li class="color-text"><%= f.radio_button(:color, "off-white") %> Off-White</li>
 					<li class="white"></li>
-					<li class="color-text"><%= radio_button_tag(:choose_color, "white") %> White</li>
+					<li class="color-text"><%= f.radio_button(:color, "white") %> White</li>
 					<li class="taupe"></li>
-					<li class="color-text"><%= radio_button_tag(:choose_color, "taupe") %> Taupe</li>
+					<li class="color-text"><%= f.radio_button(:color, "taupe") %> Taupe</li>
 			</ul>
-				<%= submit_tag "CONFIRM COLOR", :class => "choose-submit" %>
+				<%= f.submit "CONFIRM COLOR", :class => "choose-submit" %>
 		<% end %>
 	</div>
 
