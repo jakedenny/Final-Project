@@ -15,7 +15,7 @@ FinalProject::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
 
   get "account" => "static_pages#account", :as => "account"
-  get "cart" => "static_pages#cart", :as => "cart"
+  get "cart" => "static_pages#order", :as => "order"
 
   root :to => "static_pages#index"
   
